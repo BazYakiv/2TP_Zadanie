@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>S3</title>
+</head>
+<style>
+.body{
+    margin: 0;
+    padding: 0;
+  
+}
+#fullscreen-box{
+    position: fixed;
+    height:100%;
+    width:100%;
+    background-image: url(IMGS/background.jpg);
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#main-box{
+    background-color: rgba(255, 255, 255, 0.644);
+    width: 1000px;
+    height: 100%;
+
+    border-radius: 50px;
+    box-shadow: 0px 5px 0px rgba(128, 128, 128, 0.432);
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 20px;
+    transition: 0.5s, all ease;
+    animation: popup ease-in 0.3s;
+
+    overflow-y: scroll;
+
+}
+
+.table{
+
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-shadow: 0px 10px 5px rgba(59, 59, 59, 0.185);
+}
+
+.Back{
+
+    padding: 20px;
+    margin: 20px;
+
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 25px;
+        
+    font-weight: lighter;
+color: rgb(255, 255, 255);
+
+    background: #ff02029f;
+    border: none;
+    border-radius: 20px;
+    width: 50%;
+    height: 100px;
+    transition: 0.5s all;
+    box-shadow: 0 8px 2px  rgba(136, 34, 34, 0.767);
+    align-self: center;
+    justify-content: baseline;
+}
+
+.Back:hover{
+    background: #ff0000;
+    width: 70%;
+    border-radius: 30px;
+    }
+.Back:active{
+    background-color: rgb(255, 123, 0);
+}
+
+th, td{
+    padding: 5px;
+    border: 0.1px solid black;
+}
+.header-text{
+    font-size: 50px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    justify-self:baseline;
+    margin: 0;
+}
+@keyframes popup {
+
+    0%{
+        transform: translateY(-500px);
+    }
+
+
+    100%{
+        transform: translateY(0px);
+    }
+
+}
+
+</style>
+<body>
+    <div id="fullscreen-box">
+
+        <div id="main-box">
+            
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <p class="header-text">Polecenia</p>
+            <hr style="width:  100%;">
+            <table class="table">
+
+                <tr>
+                    <th colspan="1">Nazwa</th>
+                    <th >Definicja</th>
+                    <th >Przykłady</th>
+                </tr>
+                <tr>
+                    <td>
+                        <b>Grooming</b>
+                    </td>
+
+                    <td>
+                        Grooming to proces, w którym dorosła osoba manipuluje dzieckiem lub nastolatkiem w celu zdobycia jego zaufania i przygotowania do wykorzystywania seksualnego lub innej krzywdzącej interakcji.
+                    </td>
+                    
+                    <td>Dorosły mężczyzna nawiązuje przyjaźń z nastolatkiem przez Internet, wysyłając mu prezenty, a potem próbuje go nakłonić do spotkania w celu wykorzystania seksualnego.
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>Seksting</b>
+                    </td>
+
+                    <td>
+                        Seksting to wysyłanie, odbieranie lub dzielenie się zdjęciami, filmami lub wiadomościami o charakterze seksualnym za pomocą urządzeń elektronicznych, najczęściej przez media społecznościowe lub aplikacje do wiadomości.
+                    </td>
+                    
+                    <td>Młoda osoba wysyła zdjęcie o charakterze intymnym swojej sympatii w wiadomości tekstowej.
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>Cyberprzemoc</b>
+                    </td>
+
+                    <td>
+                        Cyberprzemoc to agresywne działania w Internecie mające na celu skrzywdzenie innych, które mogą obejmować groźby, nękanie, szkalowanie lub inne formy złośliwego zachowania.
+                    </td>
+                    
+                    <td>Ktoś tworzy fałszywy profil w mediach społecznościowych, aby wyśmiewać drugą osobę, publikując kompromitujące zdjęcia.
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>Trolling</b>
+                    </td>
+
+                    <td>
+                        Trolling to celowe wprowadzanie zamieszania lub prowokowanie innych użytkowników Internetu poprzez irytujące, kontrowersyjne lub obraźliwe komentarze, zwykle w celu wywołania reakcji.
+                    </td>
+                    
+                    <td>Osoba na forum internetowym celowo zamieszcza kontrowersyjny komentarz, aby wywołać kłótnie między użytkownikami.
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>Cyberstalking</b>
+                    </td>
+
+                    <td>
+                        Cyberstalking to uporczywe nękanie lub śledzenie kogoś w Internecie, w tym wysyłanie niechcianych wiadomości, monitorowanie działań online ofiary i grożenie jej.
+                    </td>
+                    
+                    <td>Osoba codziennie wysyła wiadomości do innej osoby, śledzi jej aktywności w mediach społecznościowych i grozi jej.
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>Siecioholizm</b>
+                    </td>
+
+                    <td>
+                        Siecioholizm to uzależnienie od Internetu, przejawiające się nadmiernym spędzaniem czasu w sieci kosztem życia offline, co może prowadzić do negatywnych skutków dla zdrowia i relacji interpersonalnych.
+                    </td>
+                    
+                    <td>Osoba spędza kilkanaście godzin dziennie w Internecie, zaniedbując obowiązki domowe i zawodowe.
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>Patostream</b>
+                    </td>
+
+                    <td>
+                        Patostream to transmisja na żywo w Internecie, często o niskiej wartości merytorycznej, mająca na celu przyciągnięcie widzów poprzez skandaliczne, wulgarne lub nieodpowiedzialne zachowania.
+                    </td>
+                    
+                    <td>Osoba prowadzi transmisję na żywo, w której pije alkohol w nadmiernych ilościach, wulgarnie obraża innych ludzi i angażuje się w skandaliczne zachowania.
+
+
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>Cyberbullying</b>
+                    </td>
+
+                    <td>
+                        Cyberbullying to forma przemocy rówieśniczej, w której jedna osoba lub grupa celowo nęka, obraża lub szkalować inną osobę za pomocą technologii, takich jak Internet, media społecznościowe lub wiadomości tekstowe.
+                    </td>
+                    
+                    <td>Grupa uczniów tworzy stronę w mediach społecznościowych, na której wyśmiewają jednego kolegę ze szkoły, publikując obraźliwe zdjęcia i komentarze.
+
+
+
+                    </td>
+                </tr>
+            </table>
+            <button class="Back" onclick="window.location = 'S2.html'">Wróć 🏠</button>
+
+        </div>
+
+
+    </div>
+</body>
+<script>
+
+    
+
+
+
+
+  
+
+    
+
+</script>
+</html>

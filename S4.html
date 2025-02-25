@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>S4</title>
+</head>
+<style>
+.body{
+    margin: 0;
+    padding: 0;
+  
+}
+#fullscreen-box{
+    position: fixed;
+    height:100%;
+    width:100%;
+    background-image: url(IMGS/background.jpg);
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#main-box{
+    background-color: rgba(255, 255, 255, 0.644);
+    width: 1000px;
+    height: 100%;
+
+    border-radius: 50px;
+    box-shadow: 0px 5px 0px rgba(128, 128, 128, 0.432);
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 20px;
+    transition: 0.5s, all ease;
+    animation: popup ease-in 0.3s;
+
+    overflow-y: scroll;
+
+}
+
+
+
+.Back{
+
+    padding: 20px;
+    margin: 20px;
+
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 25px;
+        
+    font-weight: lighter;
+color: rgb(255, 255, 255);
+
+    background: #ff02029f;
+    border: none;
+    border-radius: 20px;
+    width: 50%;
+    height: 100px;
+    transition: 0.5s all;
+    box-shadow: 0 8px 2px  rgba(136, 34, 34, 0.767);
+    align-self: center;
+    justify-content: baseline;
+}
+
+.Back:hover{
+    background: #ff0000;
+    width: 70%;
+    border-radius: 30px;
+    }
+.Back:active{
+    background-color: rgb(255, 123, 0);
+}
+
+
+.header-text{
+    font-size: 50px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    justify-self:baseline;
+    margin: 0;
+    margin-top: 14000px;
+}
+.text{
+    font-size: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    justify-self:baseline;
+}
+.text2{
+    font-size: 18px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 100;
+    justify-self:baseline;
+
+}
+
+@keyframes popup {
+
+    0%{
+        transform: translateY(-500px);
+    }
+
+
+    100%{
+        transform: translateY(0px);
+    }
+
+}
+
+img{
+    width: 700px;
+    align-self: center;
+    justify-self: center;
+    margin: 0;
+}
+</style>
+<body>
+    <div id="fullscreen-box">
+
+        <div id="main-box">
+            
+            
+            <p class="header-text">LibreOffice - Instrukcja</p>
+            <hr style="width:  100%;">
+            <p class="text">Otwórz program LibreOffice, następnie otwórz nowy dokument tekstowy i zapisz go na 
+                pulpicie używając swoje imię, nazwisko i bieżącą datę jako nawy pliku. Następnie wykonaj w 
+                nim poniższe czynności zgodnie z opisem. </p>
+
+            <ol class="text2">
+                <li> Korzystając z menu <b>Format</b> → <b>Strona tytułowa</b> , ustaw pierwszą stronę w 
+                dokumencie jako stronę tytułową
+                <br>
+                <img src="IMGS/OFFICE/1.png">
+            
+            </li>
+                <li>  Na pierwszej stronie dodaj tekst <b>Tytuł</b> i <b>Podtytuł</b> formatując je gotowymi stylami, 
+                    odpowiednimi do nazwy
+                    <br>
+                    <img src="IMGS/OFFICE/2.png">
+                </li>
+                <li>Również na pierwszej stronie dodaj swoje imię i nazwisko formatując je jako: 
+                    Liberation Serif, 12 pkt, kursywa, wyrównaj do prawej 
+                    <br>
+                    <img src="IMGS/OFFICE/3.png">
+                </li>
+                <li>Również na pierwszej stronie wpisz dzisiejszą datę w formacie "dzień miesiąc rok r." i 
+                    sformatuj ją jako: Liberation Serif, 10 pkt, wyrównaj do środka 
+                    <br>
+                    <img src="IMGS/OFFICE/4.png">
+                </li>
+                <li>Wstaw na górze drugiej strony dokumentu nagłówek pierwszego stopnia z tekstem 
+                    <b>Treść tekstu</b> 
+                    <br>
+                    <img src="IMGS/OFFICE/5.png">
+                </li>
+                <li> Poniżej nagłówka wstaw tekst Lorem Ipsum korzystając z menu <b>Narzędzia</b> → 
+                    <b>Autotekst</b>. Zastosuj do tego tekstu gotowy styl o nazwie Treść tekstu i wyrównanie 
+                    do lewej i prawej
+                    <br>
+                    <img src="IMGS/OFFICE/6.png">
+                </li>
+                <li> Poniżej tekstu wstaw nagłówek drugiego stopnia z tekstem <b>Wcięcie pierwszego 
+                    wiersza</b> a pod nim również tekst Lorem Ipsum. Jednak tym razem do tekstu zastosuj 
+                    styl Wcięcie pierwszego wiersza.
+                    <br>
+                    <img src="IMGS/OFFICE/7.png">
+                </li>
+                <li>Poniżej tekstu wstaw nagłówek trzeciego stopnia o treści Szereg Taylora. Pod 
+                    nagłówkiem wstaw wzór na <b>Szereg Taylora</b> i wyrównaj go do środka. 
+                    <br>
+                    <img src="IMGS/OFFICE/8_1.png">
+                    <br>
+                    <img src="IMGS/OFFICE/8_2.png">
+                </li>
+                <li>Poniżej wzoru wstaw teks Lorem Ipsum i zastosuj do niego styl o nazwie Domyślny 
+                    styl akapitu oraz wyrównaj go do prawej i lewej. 
+                    <br>
+                    <img src="IMGS/OFFICE/9.png">
+                </li>
+                <li>Poniżej wstaw nagłówek czwartego stopnia o treści <b>Tabela</b>. 
+                    <br>
+                    <img src="IMGS/OFFICE/10.png">
+                </li>    
+                <li> Poniżej nagłówka wstaw tabelę składającą się z 7 kolumn i 7 wierszy. Nie ustawiaj 
+                    nagłówka tabeli ani nie zezwalaj na dzielenie tabeli pomiędzy stronami, a styl tabeli 
+                    ustaw jako Elegancki. Ustaw wyrównanie tekstu w tabeli na Wyrównaj do środka.
+                    <br>
+                    <img src="IMGS/OFFICE/11.png">
+                </li>
+                <li>W pierwszym i ostatnim wierszu tabeli wpisz dni tygodnia począwszy od 
+                    poniedziałku. W pozostałych komórkach tabeli mają znajdować się numery dni z 
+                    bieżącego miesiąca w powiązaniu z dniami tygodnia. 
+                    <br>
+                    <img src="IMGS/OFFICE/12.png">
+                </li>
+                <li>W menu <b>Narzędzia</b> → <b>Język</b> wyłącz sprawdzanie pisowni w całym dokumencie
+                    <br>
+                    <img src="IMGS/OFFICE/13.png">
+                </li>
+                <li>Wstaw do dokumentu główkę zawierającą twoje imię i nazwisko i sformatuj ją stylem 
+                    Główka lewa. 
+                    <br>
+                    <img src="IMGS/OFFICE/14.png">
+                </li>
+                <li>Wstaw do dokumentu stopkę zawierającą pole z numerem bieżącej strony i sformatuj ją stylem Stopka prawa. 
+                    <br>
+                    <img src="IMGS/OFFICE/15.png">
+                </li>
+                <li>Wstaw na końcu dokumentu spis treści zawierający domyślne ustawienia. 
+                    <br>
+                    <img src="IMGS/OFFICE/16_1.png">
+                    <br>
+                    <hr style="width:  100%;">
+                    <img src="IMGS/OFFICE/16_2.png">
+
+                </li>
+            
+                </ol>
+            <button class="Back" onclick="window.location = 'S2.html'">Wróć 🏠</button>
+
+        </div>
+
+
+    </div>
+</body>
+<script>
+
+    
+
+
+
+
+  
+
+    
+
+</script>
+</html>

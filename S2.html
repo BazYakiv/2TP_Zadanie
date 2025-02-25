@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AAA</title>
+</head>
+<style>
+.body{
+    margin: 0;
+    padding: 0;
+  
+}
+#fullscreen-box{
+    position: fixed;
+    height:100%;
+    width:100%;
+    background-image: url(IMGS/background.jpg);
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#main-box{
+    background-color: rgba(255, 255, 255, 0.295);
+    width: 1000px;
+    height: 500px;
+
+    border-radius: 50px;
+    box-shadow: 0px 5px 0px rgba(128, 128, 128, 0.432);
+    display: flex;
+    justify-content:baseline;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 20px;
+    transition: 0.5s, all ease;
+    animation: popup ease-in 0.3s
+}
+
+@keyframes popup {
+
+    0%{
+        transform: translateY(-500px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+
+}
+.header-text{
+    font-size: 50px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    justify-self:baseline;
+    margin: 0;
+}
+.buttons{
+    padding: 20px;
+    margin: 20px;
+
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    font-weight: lighter;
+color: rgb(0, 0, 0);
+
+    background: #a4ffe46b;
+    border: none;
+    border-radius: 15px;
+    width: 60%;
+    transition: 0.5s all;
+    box-shadow: 0 8px 2px  rgba(40, 108, 148, 0.767);
+}
+.buttons:hover
+{
+    background: #a4ffe4;
+
+    border-radius: 30px;
+    width: 80%;
+}
+
+.buttons-exit{
+    padding: 20px;
+    margin: 20px;
+
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 25px;
+    font-weight: lighter;
+color: rgb(255, 255, 255);
+
+    background: #ff02029f;
+    border: none;
+    border-radius: 20px;
+    width: 30%;
+    transition: 0.5s all;
+    box-shadow: 0 8px 2px  rgba(136, 34, 34, 0.767);
+    align-self: center;
+}
+.buttons-exit:hover
+{
+    background: #ff0000;
+
+    border-radius: 30px;
+    width: 40%;
+    
+}
+
+
+
+
+
+</style>
+<body>
+    <div id="fullscreen-box">
+        <div id="main-box">
+            <p class="header-text">Witam...                     <a style="color: rgb(60, 200, 255); font-style: italic;">Yakiv Bazyshyn</a>!</p>
+            <hr style="width: 100%;">
+            <button class="buttons" onclick="window.location = 'S3.html'">Polecenia 📰</button>
+            <button class="buttons" onclick="window.location = 'S4.html'">LibreOffice - Instrukcja 🗂️</button>
+            <button class="buttons" onclick="window.location = 'S5.html'">JS - Przyklady 🗒️</button>
+            <button class="buttons-exit" onclick="window.location = 'S1.html'" >Zakończenie sesji 📍</button>
+        </div>
+
+
+    </div>
+</body>
+<script>
+
+    
+
+    const L = "yakiv";
+    const P = "123";
+
+
+
+
+  
+
+    
+
+</script>
+</html>

@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>S5</title>
+</head>
+<style>
+.body{
+    margin: 0;
+    padding: 0;
+  
+}
+#fullscreen-box{
+    position: fixed;
+    height:100%;
+    width:100%;
+    background-image: url(IMGS/background.jpg);
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#main-box{
+    background-color: rgba(255, 255, 255, 0.644);
+    width: 1500px;
+    height: 100%;
+
+    border-radius: 50px;
+    box-shadow: 0px 5px 0px rgba(128, 128, 128, 0.432);
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 20px;
+    transition: 0.5s, all ease;
+    animation: popup ease-in 0.3s;
+
+    overflow-y: scroll;
+}
+
+
+
+.Back{
+
+    padding: 20px;
+    margin: 20px;
+
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 25px;
+        
+    font-weight: lighter;
+color: rgb(255, 255, 255);
+
+    background: #ff02029f;
+    border: none;
+    border-radius: 20px;
+    width: 50%;
+    height: 100px;
+    transition: 0.5s all;
+    box-shadow: 0 8px 2px  rgba(136, 34, 34, 0.767);
+    align-self: center;
+    justify-content: baseline;
+}
+
+.Back:hover{
+    background: #ff0000;
+    width: 70%;
+    border-radius: 30px;
+    }
+.Back:active{
+    background-color: rgb(255, 123, 0);
+}
+
+
+.header-text{
+    font-size: 50px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    justify-self:baseline;
+    margin: 0;
+    margin-top: 200px;
+}
+
+.collapse{
+    cursor: pointer;
+    border: none;
+    background: #383838;
+    color: aliceblue;
+    height: 40px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.content{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out;
+    background: #ffc2519c;
+    color: #000000;
+    border-radius: 25px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    display: block;
+    position: relative;
+}
+
+.active, .collapse:hover{
+    background: #0f0f0f;
+}
+@keyframes popup {
+
+    0%{
+        transform: translateY(-500px);
+    }
+
+
+    100%{
+        transform: translateY(0px);
+    }
+
+}
+
+</style>
+<body>
+    <div id="fullscreen-box">
+
+        <div id="main-box">
+            
+        
+            <p class="header-text"><a style="color: #F0DB4F;">JS</a> - <a class="color: #323330;">Przykłady</a></p>
+            <hr style="width:  100%;">
+           
+            <button class="collapse">Zmienne w JavaScript</button>
+            <div class="content">
+                <pre><code>
+                &lt;html&gt;
+                &lt;head&gt;
+                    &lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;
+                &lt;/head&gt;
+                
+                    &lt;body&gt;
+                
+                        &lt;h1&gt;Zmienne w JavaScript&lt;/h1&gt;
+                
+                        &lt;script&gt;
+                            var zmienna1 = 12;
+                            var zmienna2 = 0.5;
+                            var wynik = zmienna1 * zmienna2;
+                
+                            document.write(zmienna1, " * ", zmienna2, " = ", wynik, "&lt;br&gt;");
+                
+                            var text = zmienna1 + " * " + zmienna2 + " = " + wynik;
+                            document.write(text);
+                        &lt;/script&gt;
+                
+                    &lt;/body&gt;
+                &lt;/html&gt;
+                </code></pre>
+                
+            </div>
+
+            <br>
+            <button class="collapse">Instrukcja warunkowa if</button>
+            <div class="content">
+                    <pre><code>
+                        &lt;html&gt;
+                        &lt;head&gt;
+                            &lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/&gt;
+                        &lt;/head&gt;      
+                        &lt;body&gt;
+                            &lt;h1&gt;Instrukcja warunkowa if&lt;/h1&gt;
+                            &lt;script&gt;
+                                var liczba = 8;
+                                if (liczba &gt; 10) {
+                                    document.write("Liczba ", liczba, " jest wieksza od liczby 10");
+                                }
+                                else if (liczba &gt; 10) {
+                                    document.write("Liczba ", liczba, " jest rowna liczbie 10");
+                                }
+                                else {
+                                    document.write("Liczba ", liczba, " jest mniejsza od liczby 10");
+                                }
+                            &lt;/script&gt;
+                        
+                        &lt;/body&gt;
+                        &lt;/html&gt;
+                        </code></pre>
+            </div>
+            <br>
+            <button class="collapse">Instrukcja warunkowa switch</button>
+            <div class="content">
+                <pre><code>
+                    &lt;html&gt;
+                    &lt;head&gt;
+                        &lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/&gt;
+                    &lt;/head&gt;
+                    
+                    &lt;body&gt;
+                    
+                        &lt;h1&gt;Instrukcja warunkowa switch&lt;/h1&gt;
+                    
+                        &lt;script&gt;
+                            number = 8;
+                    
+                            document.write("Liczba: ", number, " to slownie: ");
+                    
+                            switch(number)
+                            {
+                                case 0: document.write("Zero");
+                                        break;
+                    
+                                case 2: document.write("Dwa");
+                                        break;
+                    
+                                case 8: document.write("Osiem");
+                                        break;
+                    
+                                default: document.write("Nie potrafi przetłumaczyć");
+                            }
+                        &lt;/script&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                    </code></pre>
+                    
+            </div>
+            <br>
+            <button class="collapse">Pętla For</button>
+            <div class="content">
+                    <pre><code>
+                    &lt;html&gt;
+                    &lt;head&gt;
+                        &lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;
+                    &lt;/head&gt;
+                    
+                    &lt;body&gt;
+                    
+                        &lt;h1&gt;Pętla For&lt;/h1&gt;
+                    
+                        &lt;script&gt;
+                            for (var index = 1; index &lt;= 10; ++index)
+                            {
+                                var result = index * index;
+                                
+                                document.write(index, " * ", index, " = ", result, "&lt;br&gt;");
+                            }
+                        &lt;/script&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                    </code></pre>
+                    
+            </div>
+            <br>
+            <button class="collapse">Pętla while</button>
+            <div class="content">
+                <pre><code>&lt;html&gt;
+                    &lt;head&gt;
+                        &lt;meta http-equiv="Content-Type"
+                              content="text/html; charset=UTF-8" /&gt;
+                    &lt;/head&gt;
+                
+                    &lt;body&gt;
+                
+                        &lt;h1&gt;Pętla while&lt;/h1&gt;
+                
+                        &lt;script&gt;
+                            var index = 1;
+                            
+                            while(index &lt;= 10)
+                            {
+                                result = index * index;
+                                
+                                document.write(index, " * ", index, " = ", result, "&lt;br&gt;");
+                                
+                                index++;
+                            }
+                        &lt;/script&gt;
+                
+                    &lt;/body&gt;
+                &lt;/html&gt;
+                </code></pre>
+                
+                    
+            </div>
+            <br>
+            <button class="collapse">Pętla do while</button>
+            <div class="content">
+                <pre><code>
+                    &lt;html&gt;
+                    &lt;head&gt;
+                        &lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;
+                    &lt;/head&gt;
+                    
+                    &lt;body&gt;
+                    
+                        &lt;h1&gt;Pętla do while&lt;/h1&gt;
+                    
+                        &lt;script&gt;
+                            var index = 1;
+                            
+                            do
+                            {
+                                var result = index * index;
+                                
+                                document.write(index, " * ", index, " = ", result, "&lt;br&gt;");
+                                
+                                index++;
+                            }
+                            while(index &lt;= 10);
+                        &lt;/script&gt;
+                    
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                    </code></pre>
+            </div>
+            <br>
+            <button class="collapse">Instrukcja continue i break</button>
+            <div class="content">
+                <pre><code>&lt;html&gt;
+                    &lt;head&gt;
+                        &lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;
+                    &lt;/head&gt;
+                
+                    &lt;body&gt;
+                
+                        &lt;h1&gt;Instrukcja continue i break&lt;/h1&gt;
+                
+                        &lt;script&gt;
+                            for (var index = 1; index &lt;= 10; ++index)
+                            {
+                                if (index == 5)
+                                {
+                                    document.write("Instrukcja continue &lt;br&gt;");
+                                    continue;
+                                }
+                                
+                                document.write(index, "&lt;br&gt;");
+                                
+                                if (index == 7)
+                                { 
+                                    document.write("Instrukcja break &lt;br&gt;");
+                                    break;
+                                }
+                            }
+                        &lt;/script&gt;
+                
+                    &lt;/body&gt;
+                &lt;/html&gt;
+                </code></pre>
+                
+            </div>
+            <br>
+            <button class="collapse">Operatory arytmetyczne</button>
+            <div class="content">
+                <pre><code>&lt;html&gt;
+                    &lt;head&gt;
+                        &lt;meta http-equiv="Content-Type"
+                              content="text/html; charset=UTF-8" /&gt;
+                    &lt;/head&gt;
+                
+                    &lt;body&gt;
+                
+                        &lt;h1&gt;Operatory arytmetyczne&lt;/h1&gt;
+                
+                        &lt;script&gt;
+                            var firstNumber = 10;
+                            var secondNumber = 6;
+                            
+                            var result = firstNumber % secondNumber;
+                                
+                            document.write(result, "&lt;br&gt;");
+                        &lt;/script&gt;
+                
+                    &lt;/body&gt;
+                &lt;/html&gt;
+                </code></pre>
+                
+            </div>
+            <br>
+            <button class="collapse">Operatory logiczne</button>
+            <div class="content">
+                <pre><code>&lt;html&gt;
+                    &lt;head&gt;
+                        &lt;meta http-equiv="Content-Type"
+                              content="text/html; charset=UTF-8" /&gt;
+                    &lt;/head&gt;
+                
+                    &lt;body&gt;
+                
+                        &lt;h1&gt;Operatory logiczne&lt;/h1&gt;
+                
+                        &lt;script&gt;
+                            var firstNumber = 10;
+                            var secondNumber = 6;
+                            
+                            if (firstNumber == 10 &amp;&amp; secondNumber &lt;= 6)
+                            {
+                                document.write("Warunek został spełniony");
+                            }
+                        &lt;/script&gt;
+                
+                    &lt;/body&gt;
+                &lt;/html&gt;
+                </code></pre>
+                
+            </div>
+            <br>
+            <button class="collapse">Funkcje</button>
+            <div class="content">
+                <pre><code>&lt;html&gt;
+                    &lt;head&gt;
+                        &lt;meta http-equiv="Content-Type"
+                              content="text/html; charset=UTF-8" /&gt;
+                    &lt;/head&gt;
+                
+                    &lt;body&gt;
+                
+                        &lt;h1&gt;Funkcje&lt;/h1&gt;
+                
+                        &lt;script&gt;
+                            var argument1 = 10;
+                            var argument2 = 8;
+                
+                            function dodaj(argument1, argument2)
+                            {
+                                return argument1 + argument2;
+                            }
+                
+                            var rezultat = dodaj(argument1, argument2);
+                
+                            document.write(rezultat);
+                        &lt;/script&gt;
+                
+                    &lt;/body&gt;
+                &lt;/html&gt;
+                </code></pre>
+                
+            </div>
+            <br>
+            <button class="collapse">Funkcja z argumentem domniemanym</button>
+            <div class="content">
+                <pre><code>&lt;html&gt;
+                    &lt;head&gt;
+                        &lt;meta http-equiv="Content-Type"
+                              content="text/html; charset=UTF-8" /&gt;
+                    &lt;/head&gt;
+                &lt;body&gt;
+                
+                    &lt;h1&gt;Funkcja z argumentem domniemanym&lt;/h1&gt;
+                    
+                    &lt;script&gt;
+                        var number = 2;
+                       
+                        document.write(number, " to the power of 5 = ", power(number, 5), "&lt;br&gt;");
+                        
+                        number = 8;
+                        
+                        document.write(number, " to the power of 2 = ", power(number), "&lt;br&gt;");
+                        
+                        function power(number, power = 2)
+                        {
+                            var result = 1;
+                            
+                            for(var index = 0; index &lt; power; ++index)
+                            {
+                                result *= number;
+                            }
+                            
+                            return result;
+                        }
+                    &lt;/script&gt;
+                    
+                &lt;/body&gt;
+                &lt;/html&gt;
+                </code></pre>
+                
+            </div>
+            <br>
+            <button class="collapse">Obliczanie silni</button>
+            <div class="content">
+                <pre><code>&lt;html&gt;
+                    &lt;head&gt;
+                        &lt;meta http-equiv="Content-Type"
+                              content="text/html; charset=UTF-8" /&gt;
+                    &lt;/head&gt;
+                
+                &lt;body&gt;
+                
+                    &lt;h1&gt;Obliczanie silni&lt;/h1&gt;
+                
+                    &lt;form name="myForm"&gt;
+                        &lt;p&gt; &lt;b&gt;Podaj liczbę:&lt;/b&gt;
+                            &lt;input type="number" name="myNumber" value="0" size=2&gt; &lt;/p&gt;
+                        &lt;input type="reset" value="Wyczysc"&gt;
+                        &lt;input type="button" value="Oblicz"
+                        onclick="obliczSilnie(document.myForm.myNumber.value)"&gt;
+                    &lt;/form&gt;
+                
+                    &lt;p id="result"&gt;&lt;/p&gt;
+                
+                    &lt;script&gt;
+                
+                        function obliczSilnie(liczba)
+                        {
+                            var wynik = silnia(liczba);
+                
+                            if (wynik &gt; 0)
+                            {  
+                                document.getElementById("result").innerHTML =
+                                    "&lt;h3 style='color:blue;'&gt;Silnia liczby " + liczba + " wynosi: " + wynik + "&lt;/h3&gt;";
+                            }
+                        }
+                
+                        function silnia(liczba)
+                        {
+                            if (liczba == 0 || liczba == 1)
+                            {
+                                return 1;
+                            }
+                            else if (liczba &lt; 0)
+                            {  
+                                error();
+                                return -1;
+                            }
+                
+                            var wynik = liczba * silnia(liczba - 1);
+                
+                            return wynik;
+                        }
+                
+                        function error()
+                        {
+                            document.getElementById("result").innerHTML = "&lt;h3 style='color:red;'&gt; Błąd: Nie można obliczyć silni dla liczby ujemnej. &lt;/h3&gt;";
+                        }    
+                
+                    &lt;/script&gt;
+                
+                &lt;/body&gt;
+                &lt;/html&gt;
+                </code></pre>
+                
+            </div>
+
+            <button class="Back" onclick="window.location = 'S2.html'">Wróć 🏠</button>
+
+
+        </div>
+
+
+    </div>
+</body>
+<script>
+
+    var buttons = document.getElementsByClassName("collapse")
+
+    for(let i = 0; i < buttons.length; i++){
+        buttons[i].addEventListener("click", function(){
+
+            this.classList.toggle("active")
+            var content = this.nextElementSibling;
+            if(content.style.maxHeight){
+                content.style.maxHeight = null;
+                setTimeout(() => (content.style.overflow = "hidden"), 100);
+            }else{
+                content.style.overflow = "visible";
+                content.style.maxHeight = content.scrollHeight + "px"
+            }
+        })
+    }
+
+
+
+
+
+  
+
+    
+
+</script>
+</html>
